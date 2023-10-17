@@ -1,0 +1,1317 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2023-10-17 15:39:28 +0100">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicons/dc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicons/dc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicons/dc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/dc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/favicons/dc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicons/dc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicons/dc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicons/dc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Data Carpentry - Data Analysis and Visualization in Python for Ecologists"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/assets/favicons/dc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/assets/favicons/dc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/assets/favicons/dc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/assets/favicons/dc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/assets/favicons/dc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Starting With Data &ndash; Data Analysis and Visualization in Python for Ecologists
+  </title>
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://datacarpentry.org" class="pull-left">
+        <img class="navbar-logo" src="/assets/img/dc-icon-black.svg" alt="Data Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="/index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="/setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="/00-before-we-start/index.html">Before we start</a></li>
+            
+            
+            <li><a href="/01-short-introduction-to-Python/index.html">Short Introduction to Programming in Python</a></li>
+            
+            
+            <li><a href="/02-starting-with-data/index.html">Starting With Data</a></li>
+            
+            
+            <li><a href="/03-index-slice-subset/index.html">Indexing, Slicing and Subsetting DataFrames in Python</a></li>
+            
+            
+            <li><a href="/04-visualization-ggplot-python/index.html">Making Plots With matplotlib/seaborn</a></li>
+            
+            
+            <li><a href="/05-loops-and-functions/index.html">Data Workflows and Automation</a></li>
+            
+            
+            <li><a href="/07-visualization-ggplot-python/index.html">Making Plots With matplotlib/seaborn</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="/aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="/CONTRIBUTORS/index.html">About Contributors</a></li>
+            
+            
+            
+            
+              <li><a href="/about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="/discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="/extra_challenges/index.html"> Extra Challenges</a></li>
+            
+            
+            
+            
+              <li><a href="/figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="/guide/index.html">Instructor Notes</a></li>
+            
+            
+            
+            
+              <li><a href="/jupyter_notebooks/index.html">Overview of Jupyter Notebooks</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="/LICENSE.html">License</a></li>
+        
+
+        
+	<li><a href="/edit//_episodes/02-starting-with-data.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="/01-short-introduction-to-Python/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="/">Data Analysis and Visualization in Python for Ecologists</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="/03-index-slice-subset/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Starting With Data</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 30 min
+      <br/>
+      <strong>Exercises:</strong> 30 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How can I import data in Python?</p>
+</li>
+	
+	<li><p>What is Pandas?</p>
+</li>
+	
+	<li><p>Why should I use Pandas to work with data?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Navigate the workshop directory and download a dataset.</p>
+</li>
+	
+	<li><p>Explain what a library is and what libraries are used for.</p>
+</li>
+	
+	<li><p>Describe what the Python Data Analysis Library (Pandas) is.</p>
+</li>
+	
+	<li><p>Load the Python Data Analysis Library (Pandas).</p>
+</li>
+	
+	<li><p>Read tabular data into Python using Pandas.</p>
+</li>
+	
+	<li><p>Describe what a DataFrame is in Python.</p>
+</li>
+	
+	<li><p>Access and summarize data stored in a DataFrame.</p>
+</li>
+	
+	<li><p>Define indexing as it relates to data structures.</p>
+</li>
+	
+	<li><p>Perform basic mathematical operations and summary statistics on data in a Pandas DataFrame.</p>
+</li>
+	
+	<li><p>Create simple plots.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<h1 id="working-with-pandas-dataframes-in-python">Working With Pandas DataFrames in Python</h1>
+
+<p>We can automate the process of performing data manipulations in Python. It’s efficient to spend time
+building the code to perform these tasks because once it’s built, we can use it
+over and over on different datasets that use a similar format. This makes our
+data manipulation processes reproducible. We can also share our code with
+colleagues and they can replicate the same analysis starting with the same original data.</p>
+
+<h3 id="starting-in-the-same-spot">Starting in the same spot</h3>
+
+<p>To help the lesson run smoothly, let’s ensure everyone is in the same directory.
+This should help us avoid path and file name issues. At this time please
+navigate to the workshop directory. If you are working in Jupyter Notebook be sure
+that you start your notebook in the workshop directory.</p>
+
+<h3 id="our-data">Our Data</h3>
+
+<p>For this lesson, we will be using the Portal Teaching data, a subset of the data
+from Ernst et al.
+<a href="http://www.esapubs.org/archive/ecol/E090/118/default.htm">Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal,
+Arizona, USA</a>.</p>
+
+<p>We will be using files from the <a href="https://figshare.com/articles/Portal_Project_Teaching_Database/1314459">Portal Project Teaching Database</a>.
+This section will use the <code class="language-plaintext highlighter-rouge">surveys.csv</code> file that can be downloaded here:
+<a href="https://ndownloader.figshare.com/files/2292172">https://ndownloader.figshare.com/files/2292172</a></p>
+
+<p>We are studying the <strong>species</strong> and <strong>weight</strong> of animals caught in sites in our study
+area. The dataset is stored as a <code class="language-plaintext highlighter-rouge">.csv</code> file: each row holds information for a
+single animal, and the columns represent:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>record_id</td>
+      <td>Unique id for the observation</td>
+    </tr>
+    <tr>
+      <td>month</td>
+      <td>month of observation</td>
+    </tr>
+    <tr>
+      <td>day</td>
+      <td>day of observation</td>
+    </tr>
+    <tr>
+      <td>year</td>
+      <td>year of observation</td>
+    </tr>
+    <tr>
+      <td>plot_id</td>
+      <td>ID of a particular site</td>
+    </tr>
+    <tr>
+      <td>species_id</td>
+      <td>2-letter code</td>
+    </tr>
+    <tr>
+      <td>sex</td>
+      <td>sex of animal (“M”, “F”)</td>
+    </tr>
+    <tr>
+      <td>hindfoot_length</td>
+      <td>length of the hindfoot in mm</td>
+    </tr>
+    <tr>
+      <td>weight</td>
+      <td>weight of the animal in grams</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The first few rows of our first file look like this:</p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>record_id,month,day,year,plot_id,species_id,sex,hindfoot_length,weight
+1,7,16,1977,2,NL,M,32,
+2,7,16,1977,3,NL,M,33,
+3,7,16,1977,2,DM,F,37,
+4,7,16,1977,7,DM,M,36,
+5,7,16,1977,3,DM,M,35,
+6,7,16,1977,1,PF,M,14,
+7,7,16,1977,2,PE,F,,
+8,7,16,1977,1,DM,M,37,
+9,7,16,1977,1,DM,F,34,
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="about-libraries">About Libraries</h2>
+<p>A library in Python contains a set of tools (called functions) that perform
+tasks on our data. Importing a library is like getting a piece of lab equipment
+out of a storage locker and setting it up on the bench for use in a project.
+Once a library is set up, it can be used or called to perform the task(s)
+it was built to do.</p>
+
+<h2 id="pandas-in-python">Pandas in Python</h2>
+<p>One of the best options for working with tabular data in Python is to use the
+<a href="https://pandas.pydata.org">Python Data Analysis Library</a> (a.k.a. Pandas). The
+Pandas library provides data structures, produces high quality plots with
+<a href="https://matplotlib.org">matplotlib</a> and integrates nicely with other libraries
+that use <a href="https://www.numpy.org/">NumPy</a> (which is another Python library) arrays.</p>
+
+<p>Python doesn’t load all of the libraries available to it by default. We have to
+add an <code class="language-plaintext highlighter-rouge">import</code> statement to our code in order to use library functions. To import
+a library, we use the syntax <code class="language-plaintext highlighter-rouge">import libraryName</code>. If we want to give the
+library a nickname to shorten the command, we can add <code class="language-plaintext highlighter-rouge">as nickNameHere</code>.  An
+example of importing the pandas library using the common nickname <code class="language-plaintext highlighter-rouge">pd</code> is below.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+</code></pre></div></div>
+
+<p>Each time we call a function that’s in a library, we use the syntax
+<code class="language-plaintext highlighter-rouge">LibraryName.FunctionName</code>. Adding the library name with a <code class="language-plaintext highlighter-rouge">.</code> before the
+function name tells Python where to find the function. In the example above, we
+have imported Pandas as <code class="language-plaintext highlighter-rouge">pd</code>. This means we don’t have to type out <code class="language-plaintext highlighter-rouge">pandas</code> each
+time we call a Pandas function.</p>
+
+<h1 id="reading-csv-data-using-pandas">Reading CSV Data Using Pandas</h1>
+
+<p>We will begin by locating and reading our survey data which are in CSV format. CSV stands for
+Comma-Separated Values and is a common way to store formatted data. Other symbols may also be used, so
+you might see tab-separated, colon-separated or space separated files. pandas can work with each of these
+types of separators, as it allows you to specify the appropriate separator for your data.
+CSV files (and other -separated value file types) make it easy to share data, and can be imported and exported
+from many applications, including Microsoft Excel. For more details on CSV
+files, see the <a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/05-exporting-data">Data Organisation in Spreadsheets</a> lesson.
+We can use Pandas’ <code class="language-plaintext highlighter-rouge">read_csv</code> function to pull the file directly into a <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">DataFrame</a>.</p>
+
+<h2 id="so-whats-a-dataframe">So What’s a DataFrame?</h2>
+
+<p>A DataFrame is a 2-dimensional data structure that can store data of different
+types (including characters, integers, floating point values, factors and more)
+in columns. It is similar to a spreadsheet or an SQL table or the <code class="language-plaintext highlighter-rouge">data.frame</code> in
+R. A DataFrame always has an index (0-based). An index refers to the position of
+an element in the data structure.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Note that pd.read_csv is used because we imported pandas as pd
+</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"data/surveys.csv"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The above command yields the <strong>output</strong> below:</p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      record_id month day year  plot_id species_id  sex hindfoot_length weight
+0             1     7  16 1977        2         NL    M            32.0    NaN
+1             2     7  16 1977        3         NL    M            33.0    NaN
+2             3     7  16 1977        2         DM    F            37.0    NaN
+3             4     7  16 1977        7         DM    M            36.0    NaN
+4             5     7  16 1977        3         DM    M            35.0    NaN
+...         ...   ... ...  ...      ...        ...  ...             ...    ...
+35544     35545    12  31 2002       15         AH  NaN             NaN    NaN
+35545     35546    12  31 2002       15         AH  NaN             NaN    NaN
+35546     35547    12  31 2002       10         RM    F            15.0   14.0
+35547     35548    12  31 2002        7         DO    M            36.0   51.0
+35548     35549    12  31 2002        5        NaN  NaN             NaN    NaN
+
+[35549 rows x 9 columns]
+</code></pre></div></div>
+
+<p>We can see that there were 35,549 rows parsed. Each row has 9
+columns. The first column is the index of the DataFrame. The index is used to
+identify the position of the data, but it is not an actual column of the DataFrame.
+It looks like  the <code class="language-plaintext highlighter-rouge">read_csv</code> function in Pandas  read our file properly. However,
+we haven’t saved any data to memory so we can work with it. We need to assign the
+DataFrame to a variable. Remember that a variable is a name for a value, such as <code class="language-plaintext highlighter-rouge">x</code>,
+or  <code class="language-plaintext highlighter-rouge">data</code>. We can create a new  object with a variable name by assigning a value to it using <code class="language-plaintext highlighter-rouge">=</code>.</p>
+
+<p>Let’s call the imported survey data <code class="language-plaintext highlighter-rouge">surveys_df</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"data/surveys.csv"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Note that Python does not produce any output on the screen  when you assign the imported DataFrame to a variable.
+We can view the value of the <code class="language-plaintext highlighter-rouge">surveys_df</code>
+object by typing its name into the Python command prompt.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span>
+</code></pre></div></div>
+
+<p>which prints contents like above.</p>
+
+<p>Note: if the output is too wide to print on your narrow terminal window, you may see something
+slightly different as the large set of data scrolls past. You may see simply the last column
+of data:</p>
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>17        NaN
+18        NaN
+19        NaN
+20        NaN
+21        NaN
+22        NaN
+23        NaN
+24        NaN
+25        NaN
+26        NaN
+27        NaN
+28        NaN
+29        NaN
+...       ...
+35519    36.0
+35520    48.0
+35521    45.0
+35522    44.0
+35523    27.0
+35524    26.0
+35525    24.0
+35526    43.0
+35527     NaN
+35528    25.0
+35529     NaN
+35530     NaN
+35531    43.0
+35532    48.0
+35533    56.0
+35534    53.0
+35535    42.0
+35536    46.0
+35537    31.0
+35538    68.0
+35539    23.0
+35540    31.0
+35541    29.0
+35542    34.0
+35543     NaN
+35544     NaN
+35545     NaN
+35546    14.0
+35547    51.0
+35548     NaN
+
+[35549 rows x 9 columns]
+</code></pre></div></div>
+
+<p>Don’t worry: all the data is there! You can confirm this by scrolling upwards, or by
+looking at the <code class="language-plaintext highlighter-rouge">[# of rows x # of columns]</code> block at the end of the output.</p>
+
+<p>You can also use <code class="language-plaintext highlighter-rouge">surveys_df.head()</code> to view only the first few rows of the dataset in an output
+that is easier to fit in one window. After doing this, you can see that pandas has neatly formatted 
+the data to fit our screen:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># The head() method displays the first several lines of a file. It
+</span>                  <span class="c1"># is discussed below.
+</span></code></pre></div></div>
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   record_id  month  day  year  plot_id species_id sex  hindfoot_length  \
+5          6      7   16  1977        1         PF   M             14.0
+6          7      7   16  1977        2         PE   F              NaN
+7          8      7   16  1977        1         DM   M             37.0
+8          9      7   16  1977        1         DM   F             34.0
+9         10      7   16  1977        6         PF   F             20.0
+
+   weight
+5     NaN
+6     NaN
+7     NaN
+8     NaN
+9     NaN
+</code></pre></div></div>
+
+<h2 id="exploring-our-species-survey-data">Exploring Our Species Survey Data</h2>
+
+<p>Again, we can use the <code class="language-plaintext highlighter-rouge">type</code> function to see what kind of thing <code class="language-plaintext highlighter-rouge">surveys_df</code> is:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">surveys_df</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+</code></pre></div></div>
+
+<p>As expected, it’s a DataFrame (or, to use the full name that Python uses to refer
+to it internally, a <code class="language-plaintext highlighter-rouge">pandas.core.frame.DataFrame</code>).</p>
+
+<p>What kind of things does <code class="language-plaintext highlighter-rouge">surveys_df</code> contain? DataFrames have an attribute
+called <code class="language-plaintext highlighter-rouge">dtypes</code> that answers this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">.</span><span class="n">dtypes</span>
+</code></pre></div></div>
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>record_id            int64
+month                int64
+day                  int64
+year                 int64
+plot_id              int64
+species_id          object
+sex                 object
+hindfoot_length    float64
+weight             float64
+dtype: object
+</code></pre></div></div>
+
+<p>All the values in a single column have the same type. For example, values in the month
+column have type <code class="language-plaintext highlighter-rouge">int64</code>, which is a kind of integer. Cells in the month column cannot have
+fractional values, but values in weight and hindfoot_length columns can, because they
+have type <code class="language-plaintext highlighter-rouge">float64</code>. The <code class="language-plaintext highlighter-rouge">object</code> type doesn’t have a very helpful name, but in
+this case it represents strings (such as ‘M’ and ‘F’ in the case of sex).</p>
+
+<p>pandas and base Python use slightly different names for data types. More on this
+is in the table below:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pandas Type</th>
+      <th>Native Python Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>object</td>
+      <td>string</td>
+      <td>The most general dtype. Will be assigned to your column if column has mixed types (numbers and strings).</td>
+    </tr>
+    <tr>
+      <td>int64</td>
+      <td>int</td>
+      <td>Numeric characters. 64 refers to the memory allocated to hold this character.</td>
+    </tr>
+    <tr>
+      <td>float64</td>
+      <td>float</td>
+      <td>Numeric characters with decimals. If a column contains numbers and NaNs (see below), pandas will default to float64, in case your missing value has a decimal.</td>
+    </tr>
+    <tr>
+      <td>datetime64, timedelta[ns]</td>
+      <td>N/A (but see the <a href="http://doc.python.org/2/library/datetime.html">datetime</a> module in Python’s standard library)</td>
+      <td>Values meant to hold time data. Look into these for time series experiments.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make sure pandas is loaded
+</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># Note that pd.read_csv is used because we imported pandas as pd
+</span><span class="n">surveys_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"data/surveys.csv"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Remember that we can check the type of an object like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">type</span><span class="p">(</span><span class="n">surveys_df</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pandas.core.frame.DataFrame
+</code></pre></div></div>
+
+<p>Next, let’s look at the structure of our <code class="language-plaintext highlighter-rouge">surveys_df</code> data. In pandas, we can check
+the type of one column in a DataFrame using the syntax
+<code class="language-plaintext highlighter-rouge">dataframe_name['column_name'].dtype</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="s">'sex'</span><span class="p">].</span><span class="n">dtype</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dtype('O')
+</code></pre></div></div>
+
+<p>A type ‘O’ just stands for “object” which in pandas is a string
+(text).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="s">'record_id'</span><span class="p">].</span><span class="n">dtype</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dtype('int64')
+</code></pre></div></div>
+
+<p>The type <code class="language-plaintext highlighter-rouge">int64</code> tells us that pandas is storing each value within this column
+as a 64 bit integer. We can use the <code class="language-plaintext highlighter-rouge">dataframe_name.dtypes</code> command to view the data type
+for each column in a DataFrame (all at once).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">.</span><span class="n">dtypes</span>
+</code></pre></div></div>
+
+<p>which returns:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record_id</span>            <span class="n">int64</span>
+<span class="n">month</span>                <span class="n">int64</span>
+<span class="n">day</span>                  <span class="n">int64</span>
+<span class="n">year</span>                 <span class="n">int64</span>
+<span class="n">plot_id</span>              <span class="n">int64</span>
+<span class="n">species_id</span>          <span class="nb">object</span>
+<span class="n">sex</span>                 <span class="nb">object</span>
+<span class="n">hindfoot_length</span>    <span class="n">float64</span>
+<span class="n">weight</span>             <span class="n">float64</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="nb">object</span>
+</code></pre></div></div>
+
+<p>Note that most of the columns in our <code class="language-plaintext highlighter-rouge">survey_df</code> data are of type <code class="language-plaintext highlighter-rouge">int64</code>. This means
+that they are 64 bit integers. But the <code class="language-plaintext highlighter-rouge">weight</code> column is a floating point value
+which means it contains decimals. The <code class="language-plaintext highlighter-rouge">species_id</code> and <code class="language-plaintext highlighter-rouge">sex</code> columns are objects which
+means they contain strings.</p>
+
+<p>We can also modify the format of values within our data, if
+we want. For instance, we could convert the <code class="language-plaintext highlighter-rouge">record_id</code> field to floating point
+values.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Convert the record_id field from an integer to a float
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'record_id'</span><span class="p">]</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">[</span><span class="s">'record_id'</span><span class="p">].</span><span class="n">astype</span><span class="p">(</span><span class="s">'float64'</span><span class="p">)</span>
+<span class="n">surveys_df</span><span class="p">[</span><span class="s">'record_id'</span><span class="p">].</span><span class="n">dtype</span>
+</code></pre></div></div>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dtype('float64')
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="changing-types">Changing Types</h2>
+
+  <p>Try converting the column <code class="language-plaintext highlighter-rouge">plot_id</code> to floats using</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="s">'plot_id'</span><span class="p">].</span><span class="n">astype</span><span class="p">(</span><span class="s">"float"</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>Next try converting <code class="language-plaintext highlighter-rouge">weight</code> to an integer. What goes wrong here? What is pandas telling you?
+We will talk about some solutions to this later.</p>
+</blockquote>
+
+<h3 id="useful-ways-to-view-dataframe-objects-in-python">Useful Ways to View DataFrame Objects in Python</h3>
+
+<p>There are many ways to summarize and access the data stored in DataFrames,
+using <strong>attributes</strong> and <strong>methods</strong> provided by the DataFrame object.</p>
+
+<p>Attributes are features of an object. For example, the <code class="language-plaintext highlighter-rouge">shape</code> attribute will output
+the size (the number of rows and columns) of an object. To access an attribute,
+use the DataFrame object name followed by the attribute name <code class="language-plaintext highlighter-rouge">df_object.attribute</code>.
+For example, using the DataFrame <code class="language-plaintext highlighter-rouge">surveys_df</code> and attribute <code class="language-plaintext highlighter-rouge">columns</code>, an index
+of all the column names in the DataFrame can be accessed with <code class="language-plaintext highlighter-rouge">surveys_df.columns</code>.</p>
+
+<p>Methods are like functions, but they only work on particular kinds of objects. As
+an example, <strong>the <code class="language-plaintext highlighter-rouge">head()</code> method</strong> works on DataFrames. Methods are called in a
+similar fashion to attributes, using the syntax <code class="language-plaintext highlighter-rouge">df_object.method()</code>. Using
+<code class="language-plaintext highlighter-rouge">surveys_df.head()</code> gets the first few rows in the DataFrame <code class="language-plaintext highlighter-rouge">surveys_df</code>
+using the <code class="language-plaintext highlighter-rouge">head()</code> method. With a method, we can supply extra information
+in the parentheses to control behaviour.</p>
+
+<p>Let’s look at the data using these.</p>
+
+<blockquote class="challenge">
+  <h2 id="challenge---dataframes">Challenge - DataFrames</h2>
+
+  <p>Using our DataFrame <code class="language-plaintext highlighter-rouge">surveys_df</code>, try out the <strong>attributes</strong> &amp; <strong>methods</strong> below to see
+what they return.</p>
+
+  <ol>
+    <li><code class="language-plaintext highlighter-rouge">surveys_df.columns</code></li>
+    <li>
+      <p><code class="language-plaintext highlighter-rouge">surveys_df.shape</code> Take note of the output of <code class="language-plaintext highlighter-rouge">shape</code> - what format does it
+return the shape of the DataFrame in?</p>
+
+      <p>HINT: <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">More on tuples, here</a>.</p>
+    </li>
+    <li><code class="language-plaintext highlighter-rouge">surveys_df.head()</code> Also, what does <code class="language-plaintext highlighter-rouge">surveys_df.head(15)</code> do?</li>
+    <li><code class="language-plaintext highlighter-rouge">surveys_df.tail()</code></li>
+  </ol>
+</blockquote>
+
+<h2 id="calculating-statistics-from-data-in-a-pandas-dataframe">Calculating Statistics From Data In A Pandas DataFrame</h2>
+
+<p>We’ve read our data into Python. Next, let’s perform some quick summary
+statistics to learn more about the data that we’re working with. We might want
+to know how many animals were collected in each site, or how many of each
+species were caught. We can perform summary stats quickly using groups. But
+first we need to figure out what we want to group by.</p>
+
+<p>Let’s begin by exploring our data:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Look at the column names
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">columns</span>
+</code></pre></div></div>
+
+<p>which <strong>returns</strong>:</p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Index(['record_id', 'month', 'day', 'year', 'plot_id', 'species_id', 'sex',
+       'hindfoot_length', 'weight'],
+      dtype='object')
+</code></pre></div></div>
+
+<p>Let’s get a list of all the species. The <code class="language-plaintext highlighter-rouge">pd.unique</code> function tells us all of
+the unique values in the <code class="language-plaintext highlighter-rouge">species_id</code> column.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'species_id'</span><span class="p">])</span>
+</code></pre></div></div>
+
+<p>which <strong>returns</strong>:</p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array(['NL', 'DM', 'PF', 'PE', 'DS', 'PP', 'SH', 'OT', 'DO', 'OX', 'SS',
+       'OL', 'RM', nan, 'SA', 'PM', 'AH', 'DX', 'AB', 'CB', 'CM', 'CQ',
+       'RF', 'PC', 'PG', 'PH', 'PU', 'CV', 'UR', 'UP', 'ZL', 'UL', 'CS',
+       'SC', 'BA', 'SF', 'RO', 'AS', 'SO', 'PI', 'ST', 'CU', 'SU', 'RX',
+       'PB', 'PL', 'PX', 'CT', 'US'], dtype=object)
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="challenge---statistics">Challenge - Statistics</h2>
+
+  <ol>
+    <li>
+      <p>Create a list of unique site ID’s (“plot_id”) found in the surveys data. Call it
+  <code class="language-plaintext highlighter-rouge">site_names</code>. How many unique sites are there in the data? How many unique
+  species are in the data?</p>
+    </li>
+    <li>
+      <p>What is the difference between <code class="language-plaintext highlighter-rouge">len(site_names)</code> and <code class="language-plaintext highlighter-rouge">surveys_df['plot_id'].nunique()</code>?</p>
+    </li>
+  </ol>
+</blockquote>
+
+<h1 id="groups-in-pandas">Groups in Pandas</h1>
+
+<p>We often want to calculate summary statistics grouped by subsets or attributes
+within fields of our data. For example, we might want to calculate the average
+weight of all individuals per site.</p>
+
+<p>We can calculate basic statistics for all records in a single column using the
+syntax below:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="n">describe</span><span class="p">()</span>
+</code></pre></div></div>
+<p>gives <strong>output</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">count</span>    <span class="mf">32283.000000</span>
+<span class="n">mean</span>        <span class="mf">42.672428</span>
+<span class="n">std</span>         <span class="mf">36.631259</span>
+<span class="nb">min</span>          <span class="mf">4.000000</span>
+<span class="mi">25</span><span class="o">%</span>         <span class="mf">20.000000</span>
+<span class="mi">50</span><span class="o">%</span>         <span class="mf">37.000000</span>
+<span class="mi">75</span><span class="o">%</span>         <span class="mf">48.000000</span>
+<span class="nb">max</span>        <span class="mf">280.000000</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">weight</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</code></pre></div></div>
+
+<p>We can also extract one specific metric if we wish:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="nb">min</span><span class="p">()</span>
+<span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="nb">max</span><span class="p">()</span>
+<span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="n">std</span><span class="p">()</span>
+<span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="n">count</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>But if we want to summarize by one or more variables, for example sex, we can
+use <strong>Pandas’ <code class="language-plaintext highlighter-rouge">.groupby</code> method</strong>. Once we’ve created a groupby DataFrame, we
+can quickly calculate summary statistics by a group of our choice.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Group data by sex
+</span><span class="n">grouped_data</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'sex'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The <strong>pandas function <code class="language-plaintext highlighter-rouge">describe</code></strong> will return descriptive stats including: mean,
+median, max, min, std and count for a particular column in the data. Pandas’
+<code class="language-plaintext highlighter-rouge">describe</code> function will only return summary values for columns containing
+numeric data.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Summary statistics for all numeric columns by sex
+</span><span class="n">grouped_data</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="c1"># Provide the mean for each numeric column by sex
+</span><span class="n">grouped_data</span><span class="p">.</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">grouped_data.mean()</code> <strong>OUTPUT:</strong></p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        record_id     month        day         year    plot_id  \
+sex
+F    18036.412046  6.583047  16.007138  1990.644997  11.440854
+M    17754.835601  6.392668  16.184286  1990.480401  11.098282
+
+     hindfoot_length     weight
+sex
+F          28.836780  42.170555
+M          29.709578  42.995379
+
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">groupby</code> command is powerful in that it allows us to quickly generate
+summary stats.</p>
+
+<blockquote class="challenge">
+  <h2 id="challenge---summary-data">Challenge - Summary Data</h2>
+
+  <ol>
+    <li>How many recorded individuals are female <code class="language-plaintext highlighter-rouge">F</code> and how many male <code class="language-plaintext highlighter-rouge">M</code>?</li>
+    <li>What happens when you group by two columns using the following syntax and
+then calculate mean values?
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">grouped_data2 = surveys_df.groupby(['plot_id', 'sex'])</code></li>
+        <li><code class="language-plaintext highlighter-rouge">grouped_data2.mean()</code></li>
+      </ul>
+    </li>
+    <li>Summarize weight values for each site in your data. HINT: you can use the
+  following syntax to only create summary statistics for one column in your data.
+  <code class="language-plaintext highlighter-rouge">by_site['weight'].describe()</code></li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="did-you-get-3-right">Did you get #3 right?</h2>
+    <p><strong>A Snippet of the Output from challenge 3 looks like:</strong></p>
+
+    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code> site
+ 1     count    1903.000000
+       mean       51.822911
+       std        38.176670
+       min         4.000000
+       25%        30.000000
+       50%        44.000000
+       75%        53.000000
+       max       231.000000
+         ...
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<h2 id="quickly-creating-summary-counts-in-pandas">Quickly Creating Summary Counts in Pandas</h2>
+
+<p>Let’s next count the number of samples for each species. We can do this in a few
+ways, but we’ll use <code class="language-plaintext highlighter-rouge">groupby</code> combined with <strong>a <code class="language-plaintext highlighter-rouge">count()</code> method</strong>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Count the number of samples by species
+</span><span class="n">species_counts</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'species_id'</span><span class="p">)[</span><span class="s">'record_id'</span><span class="p">].</span><span class="n">count</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">species_counts</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Or, we can also count just the rows that have the species “DO”:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'species_id'</span><span class="p">)[</span><span class="s">'record_id'</span><span class="p">].</span><span class="n">count</span><span class="p">()[</span><span class="s">'DO'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="challenge---make-a-list">Challenge - Make a list</h2>
+
+  <p>What’s another way to create a list of species and associated <code class="language-plaintext highlighter-rouge">count</code> of the
+ records in the data? Hint: you can perform <code class="language-plaintext highlighter-rouge">count</code>, <code class="language-plaintext highlighter-rouge">min</code>, etc. functions on
+ groupby DataFrames in the same way you can perform them on regular DataFrames.</p>
+</blockquote>
+
+<h2 id="basic-math-functions">Basic Math Functions</h2>
+
+<p>If we wanted to, we could apply a mathmatical operation like addition or division
+on an entire column of our data. For example, let’s multiply all weight values by 2.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Multiply all weight values by 2
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span>
+</code></pre></div></div>
+
+<p>A more practical use of this might be to normalize the data according to a mean, area,
+or some other value calculated from our data.</p>
+
+<h1 id="quick--easy-plotting-data-using-pandas">Quick &amp; Easy Plotting Data Using Pandas</h1>
+
+<p>We can plot our summary stats using Pandas, too.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make sure figures appear inline in Ipython Notebook
+</span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="c1"># Create a quick bar chart
+</span><span class="n">species_counts</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'bar'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p><img src="../fig/countPerSpecies.png" alt="Weight by Species Site" />
+Count per species site</p>
+
+<p>We can also look at how many animals were captured in each site:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">total_count</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'plot_id'</span><span class="p">)[</span><span class="s">'record_id'</span><span class="p">].</span><span class="n">nunique</span><span class="p">()</span>
+<span class="c1"># Let's plot that too
+</span><span class="n">total_count</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'bar'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="challenge---plots">Challenge - Plots</h2>
+
+  <ol>
+    <li>Create a plot of average weight across all species per site.</li>
+    <li>Create a plot of total males versus total females for the entire dataset.</li>
+  </ol>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="summary-plotting-challenge">Summary Plotting Challenge</h2>
+
+  <p>Create a stacked bar plot, with weight on the Y axis, and the stacked variable
+being sex. The plot should show total weight by sex for each site. Some
+tips are below to help you solve this challenge:</p>
+
+  <ul>
+    <li>For more information on pandas plots, see <a href="http://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#basic-plotting-plot">pandas’ documentation page on visualization</a>.</li>
+    <li>You can use the code that follows to create a stacked bar plot but the data to stack
+ need to be in individual columns.  Here’s a simple example with some data where
+ ‘a’, ‘b’, and ‘c’ are the groups, and ‘one’ and ‘two’ are the subgroups.</li>
+  </ul>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s">'one'</span> <span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">]),</span> <span class="s">'two'</span> <span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">,</span> <span class="mf">4.</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">,</span> <span class="s">'c'</span><span class="p">,</span> <span class="s">'d'</span><span class="p">])}</span>
+<span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>shows the following data</p>
+
+  <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      one  two
+  a    1    1
+  b    2    2
+  c    3    3
+  d  NaN    4
+</code></pre></div>  </div>
+
+  <p>We can plot the above with</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Plot stacked data so columns 'one' and 'two' are stacked
+</span><span class="n">my_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+<span class="n">my_df</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'bar'</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">"The title of my graph"</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p><img src="../fig/stackedBar1.png" alt="Stacked Bar Plot" /></p>
+
+  <ul>
+    <li>You can use the <code class="language-plaintext highlighter-rouge">.unstack()</code> method to transform grouped data into columns
+for each plotting.  Try running <code class="language-plaintext highlighter-rouge">.unstack()</code> on some DataFrames above and see
+what it yields.</li>
+  </ul>
+
+  <p>Start by transforming the grouped data (by site and sex) into an unstacked layout, then create
+a stacked plot.</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-to-summary-challenge">Solution to Summary Challenge</h2>
+
+    <p>First we group data by site and by sex, and then calculate a total for each site.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_site_sex</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">'plot_id'</span><span class="p">,</span> <span class="s">'sex'</span><span class="p">])</span>
+<span class="n">site_sex_count</span> <span class="o">=</span> <span class="n">by_site_sex</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="nb">sum</span><span class="p">()</span>
+</code></pre></div>    </div>
+
+    <p>This calculates the sums of weights for each sex within each site as a table</p>
+
+    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>site  sex
+plot_id  sex
+1        F      38253
+         M      59979
+2        F      50144
+         M      57250
+3        F      27251
+         M      28253
+4        F      39796
+         M      49377
+&lt;other sites removed for brevity&gt;
+</code></pre></div>    </div>
+
+    <p>Below we’ll use <code class="language-plaintext highlighter-rouge">.unstack()</code> on our grouped data to figure out the total weight that each sex contributed to each site.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_site_sex</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">'plot_id'</span><span class="p">,</span> <span class="s">'sex'</span><span class="p">])</span>
+<span class="n">site_sex_count</span> <span class="o">=</span> <span class="n">by_site_sex</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="nb">sum</span><span class="p">()</span>
+<span class="n">site_sex_count</span><span class="p">.</span><span class="n">unstack</span><span class="p">()</span>
+</code></pre></div>    </div>
+
+    <p>The <code class="language-plaintext highlighter-rouge">unstack</code> method above will display the following output:</p>
+
+    <div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sex          F      M
+plot_id
+1        38253  59979
+2        50144  57250
+3        27251  28253
+4        39796  49377
+&lt;other sites removed for brevity&gt;
+</code></pre></div>    </div>
+
+    <p>Now, create a stacked bar plot with that data where the weights for each sex are stacked by site.</p>
+
+    <p>Rather than display it as a table, we can plot the above data by stacking the values of each sex as follows:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">by_site_sex</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">groupby</span><span class="p">([</span><span class="s">'plot_id'</span><span class="p">,</span> <span class="s">'sex'</span><span class="p">])</span>
+<span class="n">site_sex_count</span> <span class="o">=</span> <span class="n">by_site_sex</span><span class="p">[</span><span class="s">'weight'</span><span class="p">].</span><span class="nb">sum</span><span class="p">()</span>
+<span class="n">spc</span> <span class="o">=</span> <span class="n">site_sex_count</span><span class="p">.</span><span class="n">unstack</span><span class="p">()</span>
+<span class="n">s_plot</span> <span class="o">=</span> <span class="n">spc</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s">'bar'</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s">"Total weight by site and sex"</span><span class="p">)</span>
+<span class="n">s_plot</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">"Weight"</span><span class="p">)</span>
+<span class="n">s_plot</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">"Plot"</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p><img src="../fig/stackedBar.png" alt="Stacked Bar Plot" /></p>
+  </blockquote>
+</blockquote>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Libraries enable us to extend the functionality of Python.</p>
+</li>
+    
+    <li><p>Pandas is a popular library for working with data.</p>
+</li>
+    
+    <li><p>A Dataframe is a Pandas data structure that allows one to access data by column (name or index) or row.</p>
+</li>
+    
+    <li><p>Aggregating data using the <code class="language-plaintext highlighter-rouge">groupby()</code> function enables you to generate useful summaries of data quickly.</p>
+</li>
+    
+    <li><p>Plots can be created from DataFrames or subsets of data that have been generated with <code class="language-plaintext highlighter-rouge">groupby()</code>.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="/01-short-introduction-to-Python/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="/03-index-slice-subset/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2023
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://datacarpentry.org">Data Carpentry</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+    
+    
+    <a href="/edit//_episodes/02-starting-with-data.md" data-checker-ignore>Edit on GitHub</a>
+    
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="/assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>

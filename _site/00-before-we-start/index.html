@@ -1,0 +1,765 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2023-10-17 15:39:28 +0100">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicons/dc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicons/dc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicons/dc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/dc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/favicons/dc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicons/dc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicons/dc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicons/dc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Data Carpentry - Data Analysis and Visualization in Python for Ecologists"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/assets/favicons/dc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/assets/favicons/dc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/assets/favicons/dc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/assets/favicons/dc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/assets/favicons/dc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Before we start &ndash; Data Analysis and Visualization in Python for Ecologists
+  </title>
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://datacarpentry.org" class="pull-left">
+        <img class="navbar-logo" src="/assets/img/dc-icon-black.svg" alt="Data Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="/index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="/setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="/00-before-we-start/index.html">Before we start</a></li>
+            
+            
+            <li><a href="/01-short-introduction-to-Python/index.html">Short Introduction to Programming in Python</a></li>
+            
+            
+            <li><a href="/02-starting-with-data/index.html">Starting With Data</a></li>
+            
+            
+            <li><a href="/03-index-slice-subset/index.html">Indexing, Slicing and Subsetting DataFrames in Python</a></li>
+            
+            
+            <li><a href="/04-visualization-ggplot-python/index.html">Making Plots With matplotlib/seaborn</a></li>
+            
+            
+            <li><a href="/05-loops-and-functions/index.html">Data Workflows and Automation</a></li>
+            
+            
+            <li><a href="/07-visualization-ggplot-python/index.html">Making Plots With matplotlib/seaborn</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="/aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="/CONTRIBUTORS/index.html">About Contributors</a></li>
+            
+            
+            
+            
+              <li><a href="/about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="/discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="/extra_challenges/index.html"> Extra Challenges</a></li>
+            
+            
+            
+            
+              <li><a href="/figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="/guide/index.html">Instructor Notes</a></li>
+            
+            
+            
+            
+              <li><a href="/jupyter_notebooks/index.html">Overview of Jupyter Notebooks</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="/LICENSE.html">License</a></li>
+        
+
+        
+	<li><a href="/edit//_episodes/00-before-we-start.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="/"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="/">Data Analysis and Visualization in Python for Ecologists</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="/01-short-introduction-to-Python/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Before we start</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 30 min
+      <br/>
+      <strong>Exercises:</strong> 0 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>What is Python and why should I learn it?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Present motivations for using Python.</p>
+</li>
+	
+	<li><p>Organize files and directories for a set of analyses as a Python project, and understand the purpose of the working directory.</p>
+</li>
+	
+	<li><p>How to work with Jupyter Notebook and Spyder.</p>
+</li>
+	
+	<li><p>Know where to find help.</p>
+</li>
+	
+	<li><p>Demonstrate how to provide sufficient information for troubleshooting with the Python user community.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p><br /></p>
+<h2 id="what-is-python">What is Python?</h2>
+<p>Python is a general purpose programming language that supports rapid development of data analytics
+applications.  The word “Python” is used to refer to both, the programming language and the tool
+that executes the scripts written in Python language.</p>
+
+<p>Its main advantages are:</p>
+
+<ul>
+  <li>Free</li>
+  <li>Open-source</li>
+  <li>Available on all major platforms (macOS, Linux, Windows)</li>
+  <li>Supported by Python Software Foundation</li>
+  <li>Supports multiple programming paradigms</li>
+  <li>Has large community</li>
+  <li>Rich ecosystem of third-party packages</li>
+</ul>
+
+<p><em>So, why do you need Python for data analysis?</em></p>
+
+<ul>
+  <li>
+    <p><strong>Easy to learn:</strong>
+Python is easier to learn than other programming languages. This is important because lower barriers
+mean it is easier for new members of the community to get up to speed.</p>
+  </li>
+  <li>
+    <p><strong>Reproducibility:</strong>
+Reproducibility is the ability to obtain the same results using the same dataset(s) and analysis.</p>
+
+    <p>Data analysis written as a Python script can be reproduced on any platform.  Moreover, if you
+collect more or correct existing data, you can quickly re-run your analysis!</p>
+
+    <p>An increasing number of journals and funding agencies expect analyses to be reproducible,
+so knowing Python will give you an edge with these requirements.</p>
+  </li>
+  <li>
+    <p><strong>Versatility:</strong>
+Python is a versatile language that integrates with many existing applications to enable something
+completely amazing.  For example, one can use Python to generate manuscripts, so that if you need to
+update your data, analysis procedure, or change something else, you can quickly regenerate all the
+figures and your manuscript will be updated automatically.</p>
+
+    <p>Python can read text files, connect to databases, and many other data formats, on your computer or
+on the web.</p>
+  </li>
+  <li>
+    <p><strong>Interdisciplinary and extensible:</strong>
+Python provides a framework that allows anyone to combine approaches from different research
+(but not only) disciplines to best suit your analysis needs.</p>
+  </li>
+  <li>
+    <p><strong>Python has a large and welcoming community:</strong>
+Thousands of people use Python daily. Many of them are willing to help you through mailing lists and
+websites, such as <a href="https://stackoverflow.com">Stack Overflow</a>  and <a href="https://www.anaconda.com/community">Anaconda community
+portal</a>.</p>
+  </li>
+  <li>
+    <p><strong>Free and Open-Source Software (FOSS)… and Cross-Platform:</strong>
+We know we have already said that but it is worth repeating.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<h2 id="knowing-your-way-around-anaconda">Knowing your way around Anaconda</h2>
+<p><a href="https://www.anaconda.com">Anaconda</a> distribution of Python includes a lot of its popular packages,
+such as the IPython console, Jupyter Notebook, and Spyder IDE.
+Have a quick look around the Anaconda Navigator. You can launch programs from the Navigator or use the command line.</p>
+
+<p>The <a href="https://jupyter.org">Jupyter Notebook</a> is an open-source web application that allows you to create
+and share documents that allow one to create documents that combine code, graphs, and narrative text.
+<a href="https://www.spyder-ide.org">Spyder</a> is an <strong>Integrated Development Environment</strong> that
+allows one to write Python scripts and interact with the Python software from within a single interface.</p>
+
+<p>Anaconda also comes with a package manager called <a href="https://conda.io/docs/">conda</a>,
+which makes it easy to install and update additional packages.</p>
+
+<p><br /></p>
+<h2 id="research-project-best-practices">Research Project: Best Practices</h2>
+<p>It is a good idea to keep a set of related data, analyses, and text in a single folder.
+All scripts and text files within this folder can then use relative paths to the data files.
+Working this way makes it a lot easier to move around your project and share it with others.</p>
+
+<h3 id="organizing-your-working-directory">Organizing your working directory</h3>
+<p>Using a consistent folder structure across your projects will help you keep things organized,
+and will also make it easy to find/file things in the future. This can be especially helpful
+when you have multiple projects. In general, you may wish to create separate directories for
+your scripts, data, and documents.</p>
+
+<ul>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">data/</code></strong>: Use this folder to store your raw data. For the sake of transparency and provenance,
+you should always keep a copy of your <strong>raw data</strong>. If you need to cleanup data, do it
+programmatically (<em>i.e.</em> with scripts) and make sure to separate cleaned up data from the raw data.
+For example, you can store raw data in files <code class="language-plaintext highlighter-rouge">./data/raw/</code> and clean data in <code class="language-plaintext highlighter-rouge">./data/clean/</code>.</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">documents/</code></strong>: Use this folder to store outlines, drafts, and other text.</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">code/</code></strong>: Use this folder to store your (Python) scripts for data cleaning, analysis, and
+plotting that you use in this particular project.</p>
+  </li>
+</ul>
+
+<p>You may need to create additional directories depending on your project needs, but these should form
+the backbone of your project’s directory. For this workshop, we will need a <code class="language-plaintext highlighter-rouge">data/</code> folder to store
+our raw data, and we will later create a <code class="language-plaintext highlighter-rouge">data_output/</code> folder when we learn how to export data as
+CSV files.</p>
+
+<h2 id="what-is-programming-and-coding">What is Programming and Coding?</h2>
+
+<p>Programming is the process of writing <em>“programs”</em> that a computer can execute and produce some
+(useful) output.
+Programming is a multi-step process that involves the following steps:</p>
+
+<ol>
+  <li>Identifying the aspects of the real-world problem that can be solved computationally</li>
+  <li>Identifying (the best) computational solution</li>
+  <li>Implementing the solution in a specific computer language</li>
+  <li>Testing, validating, and adjusting implemented solution.</li>
+</ol>
+
+<p>While <em>“Programming”</em> refers to all of the above steps,
+<em>“Coding”</em> refers to step 3 only: <em>“Implementing the solution in a specific computer language”</em>. It’s
+important to note that <em>“the best”</em> computational solution must consider factors beyond the computer.
+Who is using the program, what resources/funds does your team have for this project, and the available
+timeline all shape and mold what “best” may be.</p>
+
+<h4 id="if-you-are-working-with-jupyter-notebook">If you are working with Jupyter notebook:</h4>
+
+<p>You can type Python code into a code cell and then execute the code by pressing
+<kbd>Shift</kbd>+<kbd>Return</kbd>.
+Output will be printed directly under the input cell.
+You can recognise a code cell by the <code class="language-plaintext highlighter-rouge">In[ ]:</code> at the beginning of the cell and output by <code class="language-plaintext highlighter-rouge">Out[ ]:</code>.
+Pressing the <strong>+</strong> button in the menu bar will add a new cell.
+All your commands as well as any output will be saved with the notebook.</p>
+
+<h4 id="if-you-are-working-with-spyder">If you are working with Spyder:</h4>
+
+<p>You can either use the console or use script files (plain text files that contain your code).  The
+console pane (in Spyder, the bottom right panel) is the place where commands written in the Python
+language can be typed and executed immediately by the computer. It is also where the results will be
+shown.  You can execute commands directly in the console by pressing <kbd>Return</kbd>, but they
+will be “lost” when you close the session.  Spyder uses the <a href="http://ipython.org">IPython</a> console by
+default.</p>
+
+<p>Since we want our code and workflow to be reproducible, it is better to type the commands in
+the script editor, and save them as a script. This way, there is a complete record of what we did,
+and anyone (including our future selves!) has an easier time reproducing the results on their computer.</p>
+
+<p>Spyder allows you to execute commands directly from the script editor by using the run buttons on
+top.  To run the entire script click <em>Run file</em> or press <kbd>F5</kbd>, to run the current line
+click <em>Run selection or current line</em> or press <kbd>F9</kbd>, other run buttons allow to run script
+cells or go into debug mode. When using <kbd>F9</kbd>, the command on the current line in the script
+(indicated by the cursor) or all of the commands in the currently selected text will be sent to the
+console and executed.</p>
+
+<p>At some point in your analysis you may want to check the content of a variable or the structure of
+an object, without necessarily keeping a record of it in your script. You can type these commands
+and execute them directly in the console. Spyder provides the
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>
+shortcuts to allow you to jump between the script and the console panes.</p>
+
+<p>If Python is ready to accept commands, the IPython console shows an <code class="language-plaintext highlighter-rouge">In [..]:</code> prompt with the
+current console line number in <code class="language-plaintext highlighter-rouge">[]</code>. If it receives a command (by typing, copy-pasting or sent from
+the script editor), Python will execute it, display the results in the <code class="language-plaintext highlighter-rouge">Out [..]:</code> cell, and come
+back with a new <code class="language-plaintext highlighter-rouge">In [..]:</code> prompt waiting for new commands.</p>
+
+<p>If Python is still waiting for you to enter more data because it isn’t complete yet, the console
+will show a <code class="language-plaintext highlighter-rouge">...:</code> prompt. It means that you haven’t finished entering a complete command.  This can
+be because you have not typed a closing parenthesis (<code class="language-plaintext highlighter-rouge">)</code>, <code class="language-plaintext highlighter-rouge">]</code>, or <code class="language-plaintext highlighter-rouge">}</code>) or quotation mark.  When this
+happens, and you thought you finished typing your command, click inside the console window and press
+<kbd>Esc</kbd>; this will cancel the incomplete command and return you to the <code class="language-plaintext highlighter-rouge">In [..]:</code> prompt.</p>
+
+<h2 id="how-to-learn-more-after-the-workshop">How to learn more after the workshop?</h2>
+
+<p>The material we cover during this workshop will give you an initial taste of how you can use Python
+to analyze data for your own research. However, you will need to learn more to do advanced
+operations such as cleaning your dataset, using statistical methods, or creating beautiful graphics.
+The best way to become proficient and efficient at python, as with any other tool, is to use it to
+address your actual research questions. As a beginner, it can feel daunting to have to write a
+script from scratch, and given that many people make their code available online, modifying existing
+code to suit your purpose might make it easier for you to get started.</p>
+
+<h2 id="seeking-help">Seeking help</h2>
+
+<ul>
+  <li>check under the <em>Help</em> menu</li>
+  <li>type <code class="language-plaintext highlighter-rouge">help()</code></li>
+  <li>type <code class="language-plaintext highlighter-rouge">?object</code> or <code class="language-plaintext highlighter-rouge">help(object)</code> to get information about an object</li>
+  <li><a href="https://www.python.org/doc">Python documentation</a></li>
+  <li><a href="https://pandas.pydata.org/pandas-docs/stable/">Pandas documentation</a></li>
+</ul>
+
+<p>Finally, a generic Google or internet search “Python task” will often either send you to the
+appropriate module documentation or a helpful forum where someone else has already asked your
+question.</p>
+
+<p>I am stuck… I get an error message that I don’t understand.
+Start by googling the error message. However, this doesn’t always work very well, because often,
+package developers rely on the error catching provided by Python. You end up with general error
+messages that might not be very helpful to diagnose a problem (e.g. “subscript out of bounds”). If
+the message is very generic, you might also include the name of the function or package you’re using
+in your query.</p>
+
+<p>However, you should check Stack Overflow. Search using the <code class="language-plaintext highlighter-rouge">[python]</code> tag. Most questions have already
+been answered, but the challenge is to use the right words in the search to find the answers:
+<a href="https://stackoverflow.com/questions/tagged/python?tab=Votes">https://stackoverflow.com/questions/tagged/python?tab=Votes</a></p>
+
+<h3 id="asking-for-help">Asking for help</h3>
+
+<p>The key to receiving help from someone is for them to rapidly grasp your problem. You should make it
+as easy as possible to pinpoint where the issue might be.</p>
+
+<p>Try to use the correct words to describe your problem. For instance, a package is not the same thing
+as a library. Most people will understand what you meant, but others have really strong feelings
+about the difference in meaning. The key point is that it can make things confusing for people
+trying to help you. Be as precise as possible when describing your problem.</p>
+
+<p>If possible, try to reduce what doesn’t work to a simple reproducible example. If you can reproduce
+the problem using a very small data frame instead of your 50,000 rows and 10,000 columns one,
+provide the small one with the description of your problem. When appropriate, try to generalize what
+you are doing so even people who are not in your field can understand the question. For instance,
+instead of using a subset of your real dataset, create a small (3 columns, 5 rows) generic one.</p>
+
+<h3 id="where-to-ask-for-help">Where to ask for help?</h3>
+
+<ul>
+  <li>The person sitting next to you during the workshop. Don’t hesitate to talk to your neighbor during
+the workshop, compare your answers, and ask for help. You might also be interested in organizing
+regular meetings following the workshop to keep learning from each other.</li>
+  <li>Your friendly colleagues: if you know someone with more experience than you, they might be able and
+willing to help you.</li>
+  <li><a href="https://stackoverflow.com/questions/tagged/python?tab=Votes">Stack Overflow</a>: if your question hasn’t been answered before and is well crafted,
+chances are you will get an answer in less than 5 min. Remember to follow their guidelines on how to
+ask a good question.</li>
+  <li><a href="https://www.python.org/community/lists">Python mailing lists</a></li>
+</ul>
+
+<h2 id="more-resources">More resources</h2>
+
+<ul>
+  <li>
+    <p><a href="https://pypi.org/">PyPI - the Python Package Index</a></p>
+  </li>
+  <li>
+    <p><a href="https://docs.python-guide.org">The Hitchhiker’s Guide to Python</a></p>
+  </li>
+  <li>
+    <p><a href="https://diveintopython3.net/">Dive into Python 3</a></p>
+  </li>
+</ul>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>Python is an open source and platform independent programming language.</p>
+</li>
+    
+    <li><p>Jupyter Notebook and the Spyder IDE are great tools to code in and interact with Python. With the large Python community it is easy to find help on the internet.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="/"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span><span class="sr-only">lesson home</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="/01-short-introduction-to-Python/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2023
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://datacarpentry.org">Data Carpentry</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+    
+    
+    <a href="/edit//_episodes/00-before-we-start.md" data-checker-ignore>Edit on GitHub</a>
+    
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="/assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>

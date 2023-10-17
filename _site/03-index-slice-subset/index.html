@@ -1,0 +1,1064 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="last-modified" content="2023-10-17 15:39:28 +0100">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- meta "search-domain" used for google site search function google_search() -->
+    <meta name="search-domain" value="">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/lesson.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/syntax.css" />
+    
+    <link rel="license" href="#license-info" />
+
+    
+
+
+
+    <!-- Favicons for everyone -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicons/dc/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/favicons/dc/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/favicons/dc/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/favicons/dc/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/assets/favicons/dc/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/assets/favicons/dc/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/assets/favicons/dc/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/assets/favicons/dc/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/assets/favicons/dc/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Data Carpentry - Data Analysis and Visualization in Python for Ecologists"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/assets/favicons/dc/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/assets/favicons/dc/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/assets/favicons/dc/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/assets/favicons/dc/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/assets/favicons/dc/mstile-310x310.png" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+  <title>
+  Indexing, Slicing and Subsetting DataFrames in Python &ndash; Data Analysis and Visualization in Python for Ecologists
+  </title>
+
+  </head>
+  <body>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      
+      
+      <a href="https://datacarpentry.org" class="pull-left">
+        <img class="navbar-logo" src="/assets/img/dc-icon-black.svg" alt="Data Carpentry logo" />
+      </a>
+      
+
+      
+      <a class="navbar-brand" href="/index.html">Home</a>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+	
+        <li><a href="/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+
+        
+	
+        <li><a href="/setup.html">Setup</a></li>
+
+        
+        
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Episodes <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            
+            
+            <li><a href="/00-before-we-start/index.html">Before we start</a></li>
+            
+            
+            <li><a href="/01-short-introduction-to-Python/index.html">Short Introduction to Programming in Python</a></li>
+            
+            
+            <li><a href="/02-starting-with-data/index.html">Starting With Data</a></li>
+            
+            
+            <li><a href="/03-index-slice-subset/index.html">Indexing, Slicing and Subsetting DataFrames in Python</a></li>
+            
+            
+            <li><a href="/04-visualization-ggplot-python/index.html">Making Plots With matplotlib/seaborn</a></li>
+            
+            
+            <li><a href="/05-loops-and-functions/index.html">Data Workflows and Automation</a></li>
+            
+            
+            <li><a href="/07-visualization-ggplot-python/index.html">Making Plots With matplotlib/seaborn</a></li>
+            
+	    <li role="separator" class="divider"></li>
+            <li><a href="/aio/index.html">All in one page (Beta)</a></li>
+          </ul>
+        </li>
+        
+	
+
+	
+	
+        <li class="dropdown">
+          <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Extras <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/reference.html">Reference</a></li>
+            
+            
+            
+              <li><a href="/CONTRIBUTORS/index.html">About Contributors</a></li>
+            
+            
+            
+            
+              <li><a href="/about/index.html">About</a></li>
+            
+            
+            
+            
+              <li><a href="/discuss/index.html">Discussion</a></li>
+            
+            
+            
+            
+              <li><a href="/extra_challenges/index.html"> Extra Challenges</a></li>
+            
+            
+            
+            
+              <li><a href="/figures/index.html">Figures</a></li>
+            
+            
+            
+            
+              <li><a href="/guide/index.html">Instructor Notes</a></li>
+            
+            
+            
+            
+              <li><a href="/jupyter_notebooks/index.html">Overview of Jupyter Notebooks</a></li>
+            
+            
+          </ul>
+        </li>
+	
+
+	
+        <li><a href="/LICENSE.html">License</a></li>
+        
+
+        
+	<li><a href="/edit//_episodes/03-index-slice-subset.md" data-checker-ignore>Improve this page <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></li>
+	
+      </ul>
+      <form class="navbar-form navbar-right" role="search" id="search" onsubmit="google_search(); return false;">
+        <div class="form-group">
+          <input type="text" id="google-search" placeholder="Search..." aria-label="Google site search">
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="/02-starting-with-data/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+    <h3 class="maintitle"><a href="/">Data Analysis and Visualization in Python for Ecologists</a></h3>
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="/04-visualization-ggplot-python/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+<article>
+<div class="row">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-10">
+    <h1 class="maintitle">Indexing, Slicing and Subsetting DataFrames in Python</h1>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<blockquote class="objectives">
+  <h2>Overview</h2>
+
+  <div class="row">
+    <div class="col-md-3">
+      <strong>Teaching:</strong> 30 min
+      <br/>
+      <strong>Exercises:</strong> 30 min
+    </div>
+    <div class="col-md-9">
+      <strong>Questions</strong>
+      <ul>
+	
+	<li><p>How can I access specific data within my data set?</p>
+</li>
+	
+	<li><p>How can Python and Pandas help me to analyse my data?</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-9">
+      <strong>Objectives</strong>
+      <ul>
+	
+	<li><p>Describe what 0-based indexing is.</p>
+</li>
+	
+	<li><p>Manipulate and extract data using column headings and index locations.</p>
+</li>
+	
+	<li><p>Employ slicing to select sets of data from a DataFrame.</p>
+</li>
+	
+	<li><p>Employ label and integer-based indexing to select ranges of data in a dataframe.</p>
+</li>
+	
+	<li><p>Reassign values within subsets of a DataFrame.</p>
+</li>
+	
+	<li><p>Create a copy of a DataFrame.</p>
+</li>
+	
+	<li><p>Query / select a subset of data using a set of criteria using the following operators: <code class="language-plaintext highlighter-rouge">==</code>, <code class="language-plaintext highlighter-rouge">!=</code>, <code class="language-plaintext highlighter-rouge">&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;</code>, <code class="language-plaintext highlighter-rouge">&gt;=</code>, <code class="language-plaintext highlighter-rouge">&lt;=</code>.</p>
+</li>
+	
+	<li><p>Locate subsets of data using masks.</p>
+</li>
+	
+	<li><p>Describe BOOLEAN objects in Python and manipulate data using BOOLEANs.</p>
+</li>
+	
+      </ul>
+    </div>
+  </div>
+
+</blockquote>
+
+<p>In the first episode of this lesson, we read a CSV file into a pandas’ DataFrame. We learned how to:</p>
+
+<ul>
+  <li>save a DataFrame to a named object,</li>
+  <li>perform basic math on data,</li>
+  <li>calculate summary statistics, and</li>
+  <li>create plots based on the data we loaded into pandas.</li>
+</ul>
+
+<p>In this lesson, we will explore ways to access different parts of the data using:</p>
+
+<ul>
+  <li>indexing,</li>
+  <li>slicing, and</li>
+  <li>subsetting.</li>
+</ul>
+
+<h2 id="loading-our-data">Loading our data</h2>
+
+<p>We will continue to use the surveys dataset that we worked with in the last
+episode. Let’s reopen and read in the data again:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Make sure pandas is loaded
+</span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># Read in the survey CSV
+</span><span class="n">surveys_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"data/surveys.csv"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="indexing-and-slicing-in-python">Indexing and Slicing in Python</h2>
+
+<p>We often want to work with subsets of a <strong>DataFrame</strong> object. There are
+different ways to accomplish this including: using labels (column headings),
+numeric ranges, or specific x,y index locations.</p>
+
+<h2 id="selecting-data-using-labels-column-headings">Selecting data using Labels (Column Headings)</h2>
+
+<p>We use square brackets <code class="language-plaintext highlighter-rouge">[]</code> to select a subset of a Python object. For example,
+we can select all data from a column named <code class="language-plaintext highlighter-rouge">species_id</code> from the <code class="language-plaintext highlighter-rouge">surveys_df</code>
+DataFrame by name. There are two ways to do this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TIP: use the .head() method we saw earlier to make output shorter
+# Method 1: select a 'subset' of the data using the column name
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'species_id'</span><span class="p">]</span>
+
+<span class="c1"># Method 2: use the column name as an 'attribute'; gives the same output
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">species_id</span>
+</code></pre></div></div>
+
+<p>We can also create a new object that contains only the data within the
+<code class="language-plaintext highlighter-rouge">species_id</code> column as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Creates an object, surveys_species, that only contains the `species_id` column
+</span><span class="n">surveys_species</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">[</span><span class="s">'species_id'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>We can pass a list of column names too, as an index to select columns in that
+order. This is useful when we need to reorganize our data.</p>
+
+<p><strong>NOTE:</strong> If a column name is not contained in the DataFrame, an exception
+(error) will be raised.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Select the species and plot columns from the DataFrame
+</span><span class="n">surveys_df</span><span class="p">[[</span><span class="s">'species_id'</span><span class="p">,</span> <span class="s">'plot_id'</span><span class="p">]]</span>
+
+<span class="c1"># What happens when you flip the order?
+</span><span class="n">surveys_df</span><span class="p">[[</span><span class="s">'plot_id'</span><span class="p">,</span> <span class="s">'species_id'</span><span class="p">]]</span>
+
+<span class="c1"># What happens if you ask for a column that doesn't exist?
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'speciess'</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Python tells us what type of error it is in the traceback, at the bottom it says
+<code class="language-plaintext highlighter-rouge">KeyError: 'speciess'</code> which means that <code class="language-plaintext highlighter-rouge">speciess</code> is not a valid column name (nor a valid key in
+the related Python data type dictionary).</p>
+
+<blockquote class="callout">
+  <h2 id="reminder">Reminder</h2>
+  <p>The Python language and its modules (such as Pandas) define reserved
+words that should not be used as identifiers when assigning objects
+and variable names. Examples of reserved words in Python include Boolean values
+<code class="language-plaintext highlighter-rouge">True</code> and <code class="language-plaintext highlighter-rouge">False</code>, operators <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">or</code>, and <code class="language-plaintext highlighter-rouge">not</code>, among others. The full list
+of reserved words for Python version 3 is provided at
+<a href="https://docs.python.org/3/reference/lexical_analysis.html#identifiers">https://docs.python.org/3/reference/lexical_analysis.html#identifiers</a>.</p>
+
+  <p>When naming objects and variables, it’s also important to avoid using
+the names of built-in data structures and methods. For example, a <em>list</em> is a built-in
+data type. It is possible to use the word ‘list’ as an identifier for a new object,
+for example <code class="language-plaintext highlighter-rouge">list = ['apples', 'oranges', 'bananas']</code>. However, you would then
+be unable to create an empty list using <code class="language-plaintext highlighter-rouge">list()</code> or convert a tuple to a
+list using <code class="language-plaintext highlighter-rouge">list(sometuple)</code>.</p>
+</blockquote>
+
+<h2 id="extracting-range-based-subsets-slicing">Extracting Range based Subsets: Slicing</h2>
+
+<blockquote class="callout">
+  <h2 id="reminder-1">Reminder</h2>
+  <p>Python uses 0-based indexing.</p>
+</blockquote>
+
+<p>Let’s remind ourselves that Python uses 0-based
+indexing. This means that the first element in an object is located at position
+<code class="language-plaintext highlighter-rouge">0</code>. This is different from other tools like R and Matlab that index elements
+within objects starting at 1.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create a list of numbers:
+</span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p><img src="../fig/slicing-indexing.png" alt="indexing diagram" />
+<img src="../fig/slicing-slicing.png" alt="slicing diagram" /></p>
+
+<blockquote class="challenge">
+  <h2 id="challenge---extracting-data">Challenge - Extracting data</h2>
+
+  <ol>
+    <li>
+      <p>What value does the code below return?</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>How about this:</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>In the example above, calling <code class="language-plaintext highlighter-rouge">a[5]</code> returns an error. Why is that?</p>
+    </li>
+    <li>
+      <p>What about?</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+</blockquote>
+
+<h2 id="slicing-subsets-of-rows-in-python">Slicing Subsets of Rows in Python</h2>
+
+<p>Slicing using the <code class="language-plaintext highlighter-rouge">[]</code> operator selects a set of rows and/or columns from a
+DataFrame. To slice out a set of rows, you use the following syntax:
+<code class="language-plaintext highlighter-rouge">data[start:stop]</code>. When slicing in pandas the start bound is included in the
+output. The stop bound is one step BEYOND the row you want to select. So if you
+want to select rows 0, 1 and 2 your code would look like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Select rows 0, 1, 2 (row 3 is not selected)
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>The stop bound in Python is different from what you might be used to in
+languages like Matlab and R.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Select the first 5 rows (rows 0, 1, 2, 3, 4)
+</span><span class="n">surveys_df</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+
+<span class="c1"># Select the last element in the list
+# (the slice starts at the last element, and ends at the end of the list)
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">:]</span>
+</code></pre></div></div>
+
+<p>We can also reassign values within subsets of our DataFrame.</p>
+
+<p>But before we do that, let’s look at the difference between the concept of
+copying objects and the concept of referencing objects in Python.</p>
+
+<h2 id="copying-objects-vs-referencing-objects-in-python">Copying Objects vs Referencing Objects in Python</h2>
+
+<p>Let’s start with an example:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Using the 'copy() method'
+</span><span class="n">true_copy_surveys_df</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Using the '=' operator
+</span><span class="n">ref_surveys_df</span> <span class="o">=</span> <span class="n">surveys_df</span>
+</code></pre></div></div>
+
+<p>You might think that the code <code class="language-plaintext highlighter-rouge">ref_surveys_df = surveys_df</code> creates a fresh
+distinct copy of the <code class="language-plaintext highlighter-rouge">surveys_df</code> DataFrame object. However, using the <code class="language-plaintext highlighter-rouge">=</code>
+operator in the simple statement <code class="language-plaintext highlighter-rouge">y = x</code> does <strong>not</strong> create a copy of our
+DataFrame. Instead, <code class="language-plaintext highlighter-rouge">y = x</code> creates a new variable <code class="language-plaintext highlighter-rouge">y</code> that references the
+<strong>same</strong> object that <code class="language-plaintext highlighter-rouge">x</code> refers to. To state this another way, there is only
+<strong>one</strong> object (the DataFrame), and both <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> refer to it.</p>
+
+<p>In contrast, the <code class="language-plaintext highlighter-rouge">copy()</code> method for a DataFrame creates a true copy of the
+DataFrame.</p>
+
+<p>Let’s look at what happens when we reassign the values within a subset of the
+DataFrame that references another DataFrame object:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Assign the value `0` to the first three rows of data in the DataFrame
+</span><span class="n">ref_surveys_df</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></div>
+
+<p>Let’s try the following code:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ref_surveys_df was created using the '=' operator
+</span><span class="n">ref_surveys_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># true_copy_surveys_df was created using the copy() function
+</span><span class="n">true_copy_surveys_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="c1"># surveys_df is the original dataframe
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>What is the difference between these three dataframes?</p>
+
+<p>When we assigned the first 3 rows the value of <code class="language-plaintext highlighter-rouge">0</code> using the
+<code class="language-plaintext highlighter-rouge">ref_surveys_df</code> DataFrame, the <code class="language-plaintext highlighter-rouge">surveys_df</code> DataFrame is modified too.
+Remember we created the reference <code class="language-plaintext highlighter-rouge">ref_surveys_df</code> object above when we did
+<code class="language-plaintext highlighter-rouge">ref_surveys_df = surveys_df</code>. Remember <code class="language-plaintext highlighter-rouge">surveys_df</code> and <code class="language-plaintext highlighter-rouge">ref_surveys_df</code>
+refer to the same exact DataFrame object. If either one changes the object,
+the other will see the same changes to the reference object.</p>
+
+<p>However - <code class="language-plaintext highlighter-rouge">true_copy_surveys_df</code> was created via the <code class="language-plaintext highlighter-rouge">copy()</code> function.
+It retains the original values for the first three rows.</p>
+
+<p><strong>To review and recap</strong>:</p>
+
+<ul>
+  <li>
+    <p><strong>Copy</strong> uses the dataframe’s <code class="language-plaintext highlighter-rouge">copy()</code> method</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">true_copy_surveys_df</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>A <strong>Reference</strong> is created using the <code class="language-plaintext highlighter-rouge">=</code> operator</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ref_surveys_df</span> <span class="o">=</span> <span class="n">surveys_df</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Okay, that’s enough of that. Let’s create a brand new clean dataframe from
+the original data CSV file.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"data/surveys.csv"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="slicing-subsets-of-rows-and-columns-in-python">Slicing Subsets of Rows and Columns in Python</h2>
+
+<p>We can select specific ranges of our data in both the row and column directions
+using either label or integer-based indexing.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">loc</code> is primarily <em>label</em> based indexing. <em>Integers</em> may be used but
+they are interpreted as a <em>label</em>.</li>
+  <li><code class="language-plaintext highlighter-rouge">iloc</code> is primarily <em>integer</em> based indexing</li>
+</ul>
+
+<p>To select a subset of rows <strong>and</strong> columns from our DataFrame, we can use the
+<code class="language-plaintext highlighter-rouge">iloc</code> method. For example, we can select month, day and year (columns 2, 3
+and 4 if we start counting at 1), like this:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># iloc[row slicing, column slicing]
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>which gives the <strong>output</strong></p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   month  day  year
+0      7   16  1977
+1      7   16  1977
+2      7   16  1977
+</code></pre></div></div>
+
+<p>Notice that we asked for a slice from 0:3. This yielded 3 rows of data. When you
+ask for 0:3, you are actually telling Python to start at index 0 and select rows
+0, 1, 2 <strong>up to but not including 3</strong>.</p>
+
+<p>Let’s explore some other ways to index and select subsets of data:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Select all columns for rows of index values 0 and 10
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="p">:]</span>
+
+<span class="c1"># What does this do?
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="s">'species_id'</span><span class="p">,</span> <span class="s">'plot_id'</span><span class="p">,</span> <span class="s">'weight'</span><span class="p">]]</span>
+
+<span class="c1"># What happens when you type the code below?
+</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">35549</span><span class="p">],</span> <span class="p">:]</span>
+</code></pre></div></div>
+
+<p><strong>NOTE</strong>: Labels must be found in the DataFrame or you will get a <code class="language-plaintext highlighter-rouge">KeyError</code>.</p>
+
+<p>Indexing by labels <code class="language-plaintext highlighter-rouge">loc</code> differs from indexing by integers <code class="language-plaintext highlighter-rouge">iloc</code>.
+With <code class="language-plaintext highlighter-rouge">loc</code>, both the start bound and the stop bound are <strong>inclusive</strong>. When using
+<code class="language-plaintext highlighter-rouge">loc</code>, integers <em>can</em> be used, but the integers refer to the
+index label and not the position. For example, using <code class="language-plaintext highlighter-rouge">loc</code> and select 1:4
+will get a different result than using <code class="language-plaintext highlighter-rouge">iloc</code> to select rows 1:4.</p>
+
+<p>We can also select a specific data value using a row and
+column location within the DataFrame and <code class="language-plaintext highlighter-rouge">iloc</code> indexing:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Syntax for iloc indexing to finding a specific data element
+</span><span class="n">dat</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">column</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>In this <code class="language-plaintext highlighter-rouge">iloc</code> example,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>gives the <strong>output</strong></p>
+
+<div class="language-plaintext output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'F'
+</code></pre></div></div>
+
+<p>Remember that Python indexing begins at 0. So, the index location [2, 6]
+selects the element that is 3 rows down and 7 columns over in the DataFrame.</p>
+
+<p>It is worth noting that rows are selected when using <code class="language-plaintext highlighter-rouge">loc</code> with a single list of
+labels (or <code class="language-plaintext highlighter-rouge">iloc</code> with a single list of integers). However, unlike <code class="language-plaintext highlighter-rouge">loc</code> or <code class="language-plaintext highlighter-rouge">iloc</code>,
+indexing a data frame directly with labels will select columns (e.g. 
+<code class="language-plaintext highlighter-rouge">surveys_df['species_id', 'plot_id', 'weight']</code>), while ranges of integers will
+select rows (e.g. surveys_df[0:13]). Direct indexing of rows is redundant with
+using <code class="language-plaintext highlighter-rouge">iloc</code>, and will raise a <code class="language-plaintext highlighter-rouge">KeyError</code> if a single integer or list is used; the
+error will also occur if index labels are used without <code class="language-plaintext highlighter-rouge">loc</code> (or column labels used
+with it).
+A useful rule of thumb is the following: integer-based slicing is best done with
+<code class="language-plaintext highlighter-rouge">iloc</code> and will avoid errors (and is generally consistent with indexing of Numpy
+arrays), label-based slicing of rows is done with <code class="language-plaintext highlighter-rouge">loc</code>, and slicing of columns by
+directly indexing column names.</p>
+
+<blockquote class="challenge">
+  <h2 id="challenge---range">Challenge - Range</h2>
+
+  <ol>
+    <li>
+      <p>What happens when you execute:</p>
+
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df[0:1]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df[0]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df[:4]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df[:-1]</code></li>
+      </ul>
+    </li>
+    <li>
+      <p>What happens when you call:</p>
+
+      <ul>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df.iloc[0:1]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df.iloc[0]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df.iloc[:4, :]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df.iloc[0:4, 1:4]</code></li>
+        <li><code class="language-plaintext highlighter-rouge">surveys_df.loc[0:4, 1:4]</code></li>
+      </ul>
+    </li>
+  </ol>
+
+  <ul>
+    <li>How are the last two commands different?</li>
+  </ul>
+</blockquote>
+
+<h2 id="subsetting-data-using-criteria">Subsetting Data using Criteria</h2>
+
+<p>We can also select a subset of our data using criteria. For example, we can
+select all rows that have a year value of 2002:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2002</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Which produces the following output:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">record_id</span>  <span class="n">month</span>  <span class="n">day</span>  <span class="n">year</span>  <span class="n">plot_id</span> <span class="n">species_id</span>  <span class="n">sex</span>  <span class="n">hindfoot_length</span>  <span class="n">weight</span>
+<span class="mi">33320</span>      <span class="mi">33321</span>      <span class="mi">1</span>   <span class="mi">12</span>  <span class="mi">2002</span>        <span class="mi">1</span>         <span class="n">DM</span>    <span class="n">M</span>     <span class="mi">38</span>      <span class="mi">44</span>
+<span class="mi">33321</span>      <span class="mi">33322</span>      <span class="mi">1</span>   <span class="mi">12</span>  <span class="mi">2002</span>        <span class="mi">1</span>         <span class="n">DO</span>    <span class="n">M</span>     <span class="mi">37</span>      <span class="mi">58</span>
+<span class="mi">33322</span>      <span class="mi">33323</span>      <span class="mi">1</span>   <span class="mi">12</span>  <span class="mi">2002</span>        <span class="mi">1</span>         <span class="n">PB</span>    <span class="n">M</span>     <span class="mi">28</span>      <span class="mi">45</span>
+<span class="mi">33323</span>      <span class="mi">33324</span>      <span class="mi">1</span>   <span class="mi">12</span>  <span class="mi">2002</span>        <span class="mi">1</span>         <span class="n">AB</span>  <span class="n">NaN</span>    <span class="n">NaN</span>     <span class="n">NaN</span>
+<span class="mi">33324</span>      <span class="mi">33325</span>      <span class="mi">1</span>   <span class="mi">12</span>  <span class="mi">2002</span>        <span class="mi">1</span>         <span class="n">DO</span>    <span class="n">M</span>     <span class="mi">35</span>      <span class="mi">29</span>
+<span class="p">...</span>
+<span class="mi">35544</span>      <span class="mi">35545</span>     <span class="mi">12</span>   <span class="mi">31</span>  <span class="mi">2002</span>       <span class="mi">15</span>         <span class="n">AH</span>  <span class="n">NaN</span>    <span class="n">NaN</span>     <span class="n">NaN</span>
+<span class="mi">35545</span>      <span class="mi">35546</span>     <span class="mi">12</span>   <span class="mi">31</span>  <span class="mi">2002</span>       <span class="mi">15</span>         <span class="n">AH</span>  <span class="n">NaN</span>    <span class="n">NaN</span>     <span class="n">NaN</span>
+<span class="mi">35546</span>      <span class="mi">35547</span>     <span class="mi">12</span>   <span class="mi">31</span>  <span class="mi">2002</span>       <span class="mi">10</span>         <span class="n">RM</span>    <span class="n">F</span>     <span class="mi">15</span>      <span class="mi">14</span>
+<span class="mi">35547</span>      <span class="mi">35548</span>     <span class="mi">12</span>   <span class="mi">31</span>  <span class="mi">2002</span>        <span class="mi">7</span>         <span class="n">DO</span>    <span class="n">M</span>     <span class="mi">36</span>      <span class="mi">51</span>
+<span class="mi">35548</span>      <span class="mi">35549</span>     <span class="mi">12</span>   <span class="mi">31</span>  <span class="mi">2002</span>        <span class="mi">5</span>        <span class="n">NaN</span>  <span class="n">NaN</span>    <span class="n">NaN</span>     <span class="n">NaN</span>
+
+<span class="p">[</span><span class="mi">2229</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">9</span> <span class="n">columns</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>Or we can select all rows that do not contain the year 2002:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">year</span> <span class="o">!=</span> <span class="mi">2002</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>We can define sets of criteria too:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[(</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">year</span> <span class="o">&gt;=</span> <span class="mi">1980</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">surveys_df</span><span class="p">.</span><span class="n">year</span> <span class="o">&lt;=</span> <span class="mi">1985</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<h3 id="python-syntax-cheat-sheet">Python Syntax Cheat Sheet</h3>
+
+<p>We can use the syntax below when querying data by criteria from a DataFrame.
+Experiment with selecting various subsets of the “surveys” data.</p>
+
+<ul>
+  <li>Equals: <code class="language-plaintext highlighter-rouge">==</code></li>
+  <li>Not equals: <code class="language-plaintext highlighter-rouge">!=</code></li>
+  <li>Greater than, less than: <code class="language-plaintext highlighter-rouge">&gt;</code> or <code class="language-plaintext highlighter-rouge">&lt;</code></li>
+  <li>Greater than or equal to <code class="language-plaintext highlighter-rouge">&gt;=</code></li>
+  <li>Less than or equal to <code class="language-plaintext highlighter-rouge">&lt;=</code></li>
+</ul>
+
+<blockquote class="challenge">
+  <h2 id="challenge---queries">Challenge - Queries</h2>
+
+  <ol>
+    <li>
+      <p>Select a subset of rows in the <code class="language-plaintext highlighter-rouge">surveys_df</code> DataFrame that contain data from
+  the year 1999 and that contain weight values less than or equal to 8. How
+  many rows did you end up with? What did your neighbor get?</p>
+    </li>
+    <li>
+      <p>You can use the <code class="language-plaintext highlighter-rouge">isin</code> command in Python to query a DataFrame based upon a
+  list of values as follows:</p>
+
+      <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">surveys_df</span><span class="p">[</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'species_id'</span><span class="p">].</span><span class="n">isin</span><span class="p">([</span><span class="n">listGoesHere</span><span class="p">])]</span>
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+  <p>Use the <code class="language-plaintext highlighter-rouge">isin</code> function to find all plots that contain particular species
+  in the “surveys” DataFrame. How many records contain these values?</p>
+
+  <ol>
+    <li>
+      <p>Experiment with other queries. Create a query that finds all rows with a
+  weight value &gt; or equal to 0.</p>
+    </li>
+    <li>
+      <p>The <code class="language-plaintext highlighter-rouge">~</code> symbol in Python can be used to return the OPPOSITE of the
+  selection that you specify in Python. It is equivalent to <strong>is not in</strong>.
+  Write a query that selects all rows with sex NOT equal to ‘M’ or ‘F’ in
+  the “surveys” data.</p>
+    </li>
+  </ol>
+</blockquote>
+
+<h1 id="using-masks-to-identify-a-specific-condition">Using masks to identify a specific condition</h1>
+
+<p>A <strong>mask</strong> can be useful to locate where a particular subset of values exist or
+don’t exist - for example,  NaN, or “Not a Number” values. To understand masks,
+we also need to understand <code class="language-plaintext highlighter-rouge">BOOLEAN</code> objects in Python.</p>
+
+<p>Boolean values include <code class="language-plaintext highlighter-rouge">True</code> or <code class="language-plaintext highlighter-rouge">False</code>. For example,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set x to 5
+</span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c1"># What does the code below return?
+</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">5</span>
+
+<span class="c1"># How about this?
+</span><span class="n">x</span> <span class="o">==</span> <span class="mi">5</span>
+</code></pre></div></div>
+
+<p>When we ask Python whether <code class="language-plaintext highlighter-rouge">x</code> is greater than 5, it returns <code class="language-plaintext highlighter-rouge">False</code>.
+This is Python’s way to say “No”. Indeed, the value of <code class="language-plaintext highlighter-rouge">x</code> is 5,
+and 5 is not greater than 5.</p>
+
+<p>To create a boolean mask:</p>
+
+<ul>
+  <li>Set the True / False criteria (e.g. <code class="language-plaintext highlighter-rouge">values &gt; 5 = True</code>)</li>
+  <li>Python will then assess each value in the object to determine whether the
+value meets the criteria (True) or not (False).</li>
+  <li>Python creates an output object that is the same shape as the original
+object, but with a <code class="language-plaintext highlighter-rouge">True</code> or <code class="language-plaintext highlighter-rouge">False</code> value for each index location.</li>
+</ul>
+
+<p>Let’s try this out. Let’s identify all locations in the survey data that have
+null (missing or NaN) data values. We can use the <code class="language-plaintext highlighter-rouge">isnull</code> method to do this.
+The <code class="language-plaintext highlighter-rouge">isnull</code> method will compare each cell with a null value. If an element
+has a null value, it will be assigned a value of  <code class="language-plaintext highlighter-rouge">True</code> in the output object.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pd</span><span class="p">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">surveys_df</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>A snippet of the output is below:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="n">record_id</span>  <span class="n">month</span>    <span class="n">day</span>   <span class="n">year</span> <span class="n">plot_id</span> <span class="n">species_id</span>    <span class="n">sex</span>  <span class="n">hindfoot_length</span> <span class="n">weight</span>
+<span class="mi">0</span>         <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">True</span>
+<span class="mi">1</span>         <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">True</span>
+<span class="mi">2</span>         <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">True</span>
+<span class="mi">3</span>         <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">True</span>
+<span class="mi">4</span>         <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">False</span>  <span class="bp">False</span>   <span class="bp">False</span>      <span class="bp">True</span>
+
+<span class="p">[</span><span class="mi">35549</span> <span class="n">rows</span> <span class="n">x</span> <span class="mi">9</span> <span class="n">columns</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>To select the rows where there are null values, we can use
+the mask as an index to subset our data as follows:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># To select just the rows with NaN values, we can use the 'any()' method
+</span><span class="n">surveys_df</span><span class="p">[</span><span class="n">pd</span><span class="p">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">surveys_df</span><span class="p">).</span><span class="nb">any</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">weight</code> column of our DataFrame contains many <code class="language-plaintext highlighter-rouge">null</code> or <code class="language-plaintext highlighter-rouge">NaN</code>
+values.</p>
+
+<p>We can run <code class="language-plaintext highlighter-rouge">isnull</code> on a particular column too. What does the code below do?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># What does this do?
+</span><span class="n">empty_weights</span> <span class="o">=</span> <span class="n">surveys_df</span><span class="p">[</span><span class="n">pd</span><span class="p">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">surveys_df</span><span class="p">[</span><span class="s">'weight'</span><span class="p">])][</span><span class="s">'weight'</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">empty_weights</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Let’s take a minute to look at the statement above. We are using the Boolean
+object <code class="language-plaintext highlighter-rouge">pd.isnull(surveys_df['weight'])</code> as an index to <code class="language-plaintext highlighter-rouge">surveys_df</code>. We are
+asking Python to select rows that have a <code class="language-plaintext highlighter-rouge">NaN</code> value of weight.</p>
+
+<blockquote class="challenge">
+  <h2 id="challenge---putting-it-all-together">Challenge - Putting it all together</h2>
+
+  <ol>
+    <li>
+      <p>Create a new DataFrame that only contains observations with sex values that
+  are <strong>not</strong> female or male. Print the number of rows in this new DataFrame.
+  Verify the result by comparing the number of rows in the new DataFrame with
+  the number of rows in the surveys DataFrame where sex is null.</p>
+    </li>
+    <li>
+      <p>Create a new DataFrame that contains only observations that are of sex male
+  or female and where weight values are greater than 0. Create a stacked bar
+  plot of average weight by plot with male vs female values stacked for each
+  plot.</p>
+    </li>
+  </ol>
+</blockquote>
+
+
+
+
+
+
+<blockquote class="keypoints">
+  <h2>Key Points</h2>
+  <ul>
+    
+    <li><p>In Python, portions of data can be accessed using indices, slices, column headings, and condition-based subsetting.</p>
+</li>
+    
+    <li><p>Python uses 0-based indexing, in which the first element in a list, tuple or any other data structure has an index of 0.</p>
+</li>
+    
+    <li><p>Pandas enables common data exploration steps such as data indexing, slicing and conditional subsetting.</p>
+</li>
+    
+  </ul>
+</blockquote>
+
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-xs-1">
+    <h3 class="text-left">
+      
+      <a href="/02-starting-with-data/index.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span><span class="sr-only">previous episode</span></a>
+      
+    </h3>
+  </div>
+  <div class="col-xs-10">
+    
+  </div>
+  <div class="col-xs-1">
+    <h3 class="text-right">
+      
+      <a href="/04-visualization-ggplot-python/index.html"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="sr-only">next episode</span></a>
+      
+    </h3>
+  </div>
+</div>
+
+
+      
+      
+
+
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-6 license" id="license-info" align="left">
+	
+	Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2018–2023
+	by <a href="https://carpentries.org/">The Carpentries</a>
+        <br>
+        Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> 2016–2018
+	by <a href="https://datacarpentry.org">Data Carpentry</a>
+	
+    </div>
+    <div class="col-md-6 help-links" align="right">
+    
+    
+    <a href="/edit//_episodes/03-index-slice-subset.md" data-checker-ignore>Edit on GitHub</a>
+    
+	/
+	<a href="/blob//CONTRIBUTING.md" data-checker-ignore>Contributing</a>
+	/
+	<a href="/">Source</a>
+	/
+	<a href="/blob//CITATION" data-checker-ignore>Cite</a>
+	/
+	<a href="mailto:team@carpentries.org">Contact</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      Using <a href="https://github.com/carpentries/styles/">The Carpentries style</a>
+      version <a href="https://github.com/carpentries/styles/releases/tag/v9.5.3">9.5.3</a>.
+    </div>
+  </div>
+</footer>
+
+      
+    </div>
+    
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/lesson.js"></script>
+
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDomains", ["*.lessons.carpentries.org","*.datacarpentry.github.io","*.datacarpentry.org","*.librarycarpentry.github.io","*.librarycarpentry.org","*.swcarpentry.github.io"]]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(["disableCookies"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://carpentries.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src='//cdn.matomo.cloud/carpentries.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+
+
+<script src="/assets/js/anchor.min.js"></script>
+<script>
+    anchors.add();
+</script>
+
+  </body>
+</html>
