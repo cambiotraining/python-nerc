@@ -632,6 +632,9 @@ the loop. The statement `pass` in the body of the loop means "do nothing".
 > 2. Rewrite the loop so that the animals are separated by commas, not new lines
 > (Hint: You can concatenate strings using a plus sign. For example,
 > `print(string1 + string2)` outputs 'string1string2').
+>
+> 3. Suppose you have a list of number `xs = [3, 34, 23, 56, 14, 56]`.
+> Write a loop to sum the numbers of the list.
 {: .challenge}
 
 
@@ -679,6 +682,12 @@ some value (they got a number in the function call), the if statements return `F
 and do not execute. The opposite conditional statements, which would return
 `True` if the variables were associated with objects (if they had received value
 in the function call), would be `if start_year` and `if end_year`.
+
+> ## Challenge - Loops + If statements
+>
+> Suppose you have a list of number `xs = [3, 34, 23, 56, 14, 56]`.
+> Write a loop to sum the even numbers from the list.
+{: .challenge}
 
 ## Functions
 
