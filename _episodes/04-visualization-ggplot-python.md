@@ -1,7 +1,5 @@
 ---
 title: Making Plots With matplotlib/seaborn
-teaching: 40
-exercises: 50
 questions:
     - "How can I visualize data in Python?"
 objectives:
@@ -16,10 +14,15 @@ objectives:
 ---
 
 Python has powerful built-in plotting capabilities with the `matplotlib` library.
-For this episode, we will be using the [`seaborn`][https://seaborn.pydata.org/]
+For this episode, we will be using the [`seaborn`](https://seaborn.pydata.org/)
 package, which is built on top of Matplotlib and interacts well with Pandas.
 
-Just as with the other packages, `seaborn` needs to be imported. Here we will import
+There are other plotting packages but these are the two most popular.
+Another popular one is [`plotnine`](https://plotnine.readthedocs.io/en/), which is inspired by the `ggplot2` plotting library in R.
+For some material on this library, you can have a look at the source of this material that uses `plotnine`
+[here](https://datacarpentry.org/python-ecology-lesson/07-visualization-ggplot-python.html).
+
+Going back to `seaborn`, just as with the other packages, `seaborn` needs to be imported. Here we will import
 both `matplotlib` and `seaborn`. It is good
 practice to not just load an entire package such as `from seaborn import *`,
 but to use an abbreviation as we used `pd` for Pandas:
@@ -105,9 +108,10 @@ sns.scatterplot(data=surveys_complete, x="weight", y="hindfoot_length", alpha=0.
 Or to color each species in the plot differently, we can map the `species_id` column to the color (hue):
 ~~~
 sns.scatterplot(data=surveys_complete, x="weight", y="hindfoot_length", hue="species_id", alpha=0.25)
-![](../fig/seaborn_scatter_alpha_speciesid.png)
 ~~~
 {: .language-python}
+
+![](../fig/seaborn_scatter_alpha_speciesid.png)
 
 
 Apart from the adaptations of the arguments and settings of the seaborn plot, additional plot-level elements can be added and controlled as well.
@@ -123,6 +127,7 @@ ax.set_xlabel("Weight (g)")
 plt.legend(ncol=3)
 ~~~
 {: .language-python}
+
 ![](../fig/seaborn_scatter_alpha_speciesid_xlabel.png)
 
 
@@ -130,13 +135,12 @@ plt.legend(ncol=3)
 > Working on the surveys_complete data set, use the plot-id column to create a bar-plot that counts the number of records for each plot.
 > (Check the documentation of the barplot to handle the counts)
 > 
-> (see in general [API reference][https://seaborn.pydata.org/api.html] to find the appropriate function).
+> (see in general [API reference](https://seaborn.pydata.org/api.html) to find the appropriate plotting function).
 >
 > > ## Answers
 > >
 > > ~~~
-> > 
-> > sns.barplot(data=surveys_complete, x="plot_id", y="weight", hue="sex")
+> > sns.countplot(data=surveys_complete, x="plot_id", hue="sex")
 > > ~~~
 > > {: .language-python}
 > > 
@@ -336,6 +340,8 @@ sns.scatterplot(data=surveys_complete, x="weight", y="hindfoot_length", alpha=0.
 plt.savefig("scatterplot.png")
 ~~~
 {: .language-python}
+
+
 
 [seaborn]: https://seaborn.pydata.org/
 [ggplot2-cheat-sheet]: https://www.rstudio.com/wp-content/uploads/2015/08/ggplot2-cheatsheet.pdf
